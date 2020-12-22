@@ -1,0 +1,1419 @@
+// console.log('hello world');
+
+// for (let i = 0; i < 5; i++) {
+//     console.log('hello world')
+//
+// }
+
+// let person ={
+//     name: 'igor',
+//     age: 32
+// };
+// for (let key in person) {
+//     console.log(key, person[key]);
+// }
+
+// let colors = ['red', 'green', 'blue'];
+// // for (let color in colors)
+// //     console.log(color, colors[color]);//виводить індекси елементів, або параметри елементів
+
+// for (let color of colors)
+//     console.log(color); // виводить значеня елементів
+
+
+// let i = 0;
+//  while (i<=10){
+//      // if (i===5)break; // Результат 0 1 2 3 4
+//      // if (i%2===0){
+//      //     i++;
+//      //     continue;
+//      // }                // Результат 1 3 5 7 9
+//      console.log(i);
+//      i++;
+//  }
+
+// //повернути максимальне з двох чисел
+// function max(a,b) {
+//     // if (a>b)
+//     //     return a;
+//     // else return b;
+//
+//     //можна спростити код
+//
+//    return (a>b) ? a : b;
+//
+// }
+// let number =  max(2,3);
+// console.log(number); // 3
+// console.log(isLandscape(100, 200));
+
+// function isLandscape(width,height ) {
+//     // if(width>height) return true;
+//     // return false;
+//
+//     // //простіший код :
+//     // return(width>height)?true:false;
+//
+//     // ще простіший код, якщо результат true, false
+//     return (width>height);
+
+//число що ділиться на 3 = fizz
+//число що ділиться на 5 = Buzz
+//число що ділиться на3 і на 5 = fizzBuzz
+//не число = Nan
+//не ділиться на 3 і на 5 = input
+//
+// const output = fizzBuzz(15);
+// console.log(output);
+//
+// function fizzBuzz(input) {
+//     if ((input % 3 === 0) && (input % 5 ===0)) return 'fizzBuzz';
+//     if (typeof input !== "number") return NaN;
+//     if (input % 3 === 0) return 'fizz';
+//     if (input % 5 === 0) return 'buzz';
+//     return input
+// }
+
+// ліміт швидкості = 70
+// 5км вище ліміту = 1 бал
+//використати функцію Math.floor
+//12 або більше балів = "конфіскація прав"
+//
+// checkSpeed(76);
+// function checkSpeed(speed) {
+//     const speedLimit = 70;
+//     const kmPerPoint = 5;
+//     if (speed < speedLimit+kmPerPoint) console.log('OK');
+//     else{
+//       let points = Math.floor((speed - speedLimit)/ kmPerPoint);
+//       if (points >= 12) console.log('License is suspended');
+//       else console.log('Points', points);
+//     }
+// }
+
+
+// проітерувати і вернути ті що парні вернути як EVEN, а непарні як ODD
+// showNumber(7);
+// function showNumber(limit) {
+//     for (let i = 0; i <= limit; i++) {
+//         let numberMessage = (i%2===0)?'EVEN':'ODD';
+//         console.log(i, numberMessage);
+//     }
+// }
+
+//Правдиве значеня(Thrusy)!!!not true!!!- це те, яке не дорівнює неправдивому  Falsy
+// Falsy - 0, underfind, null, NaN, '',false
+// Завдання зробити функцію, яка показує кількість правдивих значень  в масиві
+
+// const array = [0, null, undefined,'',1,2,3];
+// console.log(countTruthy(array));
+// function countTruthy(array) {
+//    let count = 0;
+//     for (let value of array){
+//         if (value)
+//             count++;
+//     }
+//         return count;
+//     }
+
+//Вивести значення title: 'a' і director: 'b' за допомогою функції
+//та циклу For
+
+// const movie = {
+//     title: 'a',
+//     releaseYear: 2018,
+//     rating: 4.5,
+//     director: 'b'
+// };
+// showProperties(movie);
+//
+// function showProperties(obj) {
+//     for (let key in obj)
+//    if (typeof obj[key] === 'string')
+//       console.log(key, obj[key])
+// }
+
+//Якщо limit чисел, що снаходиться в діапазоні...
+// цього ліміту  ділиться на  3 або на 5 то зробити суму цих значень
+//наприклад Limit = 6, а отже там є числа (0.1.2.3.4.6, з яких
+// 3 і 6 діляться на 3 і 5 ділиться на 5, звідси сума цих чисел 3+5+6 =14
+
+//
+// function sum(limit) {
+//     let sum = 0;
+//     for (let i = 0; i <=limit; i++) {
+//        if (i%3===0||i%5===0)
+//         sum+=i;
+//     }
+//     return sum;
+// }
+// console.log(sum(6)); //14
+
+//Розрахувати середнє статистичне значення з масиву оцінок
+//якщо середній бал від 1-59 оцінка F
+//якщо середній бал від 60-69 оцінка D
+//якщо середній бал від 70-79 оцінка C
+//якщо середній бал від 80-89 оцінка B
+//якщо середній бал від 90-100 оцінка A
+
+// const marks = [80,90,50];
+//
+// console.log(calculateGrade(marks));
+//
+// function calculateGrade(marks) {
+//     let sum = 0;
+//     for (let mark of marks) {
+//         sum+=mark;
+//         let secondaryMark = sum/marks.length;
+//         if (secondaryMark<60) return 'F';
+//         if (secondaryMark<70) return 'D';
+//         if (secondaryMark<80) return 'C';
+//         if (secondaryMark<90) return 'B';
+//         if (secondaryMark<100) return 'A';
+//     }
+// }
+
+//або по іншому . Перевага цого методу в тому, що є дві окремі функції,
+// які можна ще десь перевикористати
+// const marks = [80,90,50];
+//
+// console.log(calculateGrade(marks));
+// function calculateGrade(marks) {
+//     const secondaryMark = calculateSecondaryMark(marks);
+//         if (secondaryMark<60) return 'F';
+//         if (secondaryMark<70) return 'D';
+//         if (secondaryMark<80) return 'C';
+//         if (secondaryMark<90) return 'B';
+//         if (secondaryMark<100) return 'A';
+// }
+//
+// function calculateSecondaryMark(array) {
+//     let sum = 0;
+//     for (let value of array) {
+//         sum+=value;
+//         return sum/array.length;
+//     }
+// }
+
+
+//скластиф функцію , яка б виводила в консоль кількість зірок через For
+//, що дорівнює числу ,яке ми задаємо в функцію
+// showStars(5);
+// function showStars(rows) {
+//     for (let row =1 ; row <= rows; row++) {
+//         let pattern = '';
+//         for (let i = 0; i < row; i++)
+//             pattern+="*";
+//         console.log(pattern);
+//     }
+// }
+
+//вивести натуральні числа з числа функції
+// showPrimes(10);
+//
+// function showPrimes(limit) {
+//     for (let number = 0; number <= limit; number++)
+//         if (isPrime(number)) console.log(number);
+// }
+//
+// function isPrime(number) {
+//         for (let factor = 2; factor<number; factor++)
+//             if(number % factor === 0)
+//              return false;
+//
+//         return true;
+// }
+//****************О_Б_Є_К_Т_И****************************
+// const circle = {
+//     radius: 1,
+//     draw(){
+//         console.log('draw');
+//     }
+// };
+
+// for(let key in circle)
+//     console.log(key, circle[key]); //ключ в середині обєкту , значення ключа в середині обєкту
+
+// for(let key of circle) // for of використовується для ітерації arrays i maps
+//     console.log(key); // якщо використовувати до обєкта то буде помилка - TypeError: circle is not iterable
+
+// але ми можемо використати інший спосіб використання :
+//
+// for(let key of Object.keys(circle)) // в такому вигляді повернеться array ключів і так ми зможемо їх перебрати
+//     console.log(key); //отримаємо radius і draw
+//
+// for(let entry of Object.entries(circle))
+//     console.log(entry); //Object.entries() метод возвращает массив собственных
+// перечисляемых свойств указанного объекта в формате [key, value],
+// в том же порядке, что и в цикле for...in
+// результат [ 'radius', 1 ] і [ 'draw', [Function: draw] ].
+// це ще один спосіб дістатися до параметрів обєкта
+
+// Коли ми хочемо дізнатися чи в обєкті є якийсь параметр по назві, то використовуємоЖ
+
+// if ('radius' in circle) console.log('yes');
+//Результат 'yes'
+
+
+//*******************К-Л-О-Н-У-В-А-Н-Н-Я- -О-Б-Є-К-Т-І-В-**********************/
+// const circle = {
+//     radius: 1,
+//     draw(){
+//         console.log('draw');
+//     }
+// };
+
+// const another = {}; //створюємо новий пустий обєкт
+// for(let key in circle)// ітеруємо  з допомогою for in
+//     another[key] = circle[key]; // присвоюємо в another всі значення з circle
+// console.log(another); // результат { radius: 1, draw: [Function: draw] }
+
+// Попередній спосіб є застарілим, тому є новіший еквівалентний попередньому
+
+// const another = Object.assign({}, circle); // призначено для копіювання у
+// // цільовий об'єкт всіх особистих (не успадкованих) перелічуваних властивостей
+// // одного або декількох об'єктів. Метод повертає цільовий об'єкт.
+// console.log(another);// результат { radius: 1, draw: [Function: draw] }
+
+// //цей метод є ше простіший з допомогою Spread Operator
+//
+// const another = {...circle}; //
+// console.log(another);// результат { radius: 1, draw: [Function: draw] }
+
+//*********************S-T-R-I-N-G*********************************//
+// //String Primitive
+// const message = 'hi';
+// console.log(typeof message); // результат 'string'
+//
+// //String object
+// const another = new String('hi');
+// console.log(typeof another); //результат 'object'
+
+//String methods************
+
+// const message = " This is my first message ";
+
+// console.log(message.length); //24
+// console.log(message[0]); // T
+// console.log(message[1]); // h
+// console.log(message.includes('my'));  //true
+// console.log(message.includes('not'));  //false
+// console.log(message.startsWith('This')); //true
+// console.log(message.startsWith('this')); //false
+// console.log(message.endsWith('e')); //true
+// console.log(message.indexOf('my')); //8
+// console.log(message.replace('first', 'second'));//This is my second message
+// console.log(message);//This is my first message
+// console.log(message.toUpperCase());//THIS IS MY FIRST MESSAGE
+// console.log(message.toLowerCase());//this is my first message
+// console.log(message.trim());//delete all white space before and after message
+// console.log(message.trimLeft());//delete white space from left side of message
+// console.log(message.trimRight());//delete white space from right side of message
+
+//***************E-S-C-A-P-E---N-O-T-I-A-T-I-O-N***********************//
+
+// \0	the NULL character
+// \'	single quote
+// \"	double quote
+// \\	backslash
+// \n	new line
+// \r	carriage return
+// \v	vertical tab
+// \t	tab
+// \b	backspace
+// \f	form feed
+// \uXXXX	unicode codepoint
+// \u{X} ... \u{XXXXXX}	unicode codepoint
+// \xXX	the Latin-1 character
+
+//наприклад
+
+// const message = " This is my \'first \'message ";
+// console.log(message); //This is my 'first 'message
+
+// const message = " This is my \nfirst message";
+// console.log(message);//  This is my
+//                      // first message
+
+// const message = " This is my first message";
+// console.log(message.split(' ')); //[ '', 'This', 'is', 'my', 'first', 'message' ]
+
+// const message = `This is my
+// first message`;
+// console.log(message);//This is my
+//                      //first message
+
+
+// const name = 'John';
+// const another =
+// `Hi, ${name},
+//
+// Thank you for joining my mailing list.
+//
+// Regards,
+// Igor`;
+//
+// console.log(another);//Hi, John,
+//                      //
+//                      //Thank you for joining my mailing list.
+//                      //
+//                      //Regards,
+//                      //Igor
+
+
+//Отож ` ` ці лапки дають можливість робити розмітку
+// тексту за допомогою пробілів і ентерів динамічно
+//${ } - таке позначення дає можливість вносити в текст змінну
+// або використовувати довільну просту логіку ${2+3} // 5
+
+//*/*********************D-A-T-E -- o-b-j-e-c-t*************************
+
+// const now = new Date();
+// const date1 = new Date('October 30 2019 10:00');
+// const date2 = new Date(2019, 10, 30, 8, 0);
+// now.setFullYear(2017);
+// console.log(now.toDateString());//Mon Oct 30 2017
+// console.log(now.toTimeString());// 19:57:24 GMT+0200 (GMT+02:00)
+// console.log(now.toISOString());//2017-10-30T17:58:22.528Z
+//
+
+//***********ЗАДАЧІ**************************************//
+
+
+// let adress = {
+//     street:'Manhattan',
+//     city:'New York',
+//     zipCode:10001,
+//     showAdress(){
+//      return (this.street + ' ' + this.city + ' ' + this.zipCode);
+//     }
+// };
+// console.log(adress.showAdress()); //Manhattan New York 10001
+
+//або
+//  let address = {
+//      street: 'Manhattan',
+//      city:'New York',
+//      zipCode:10001,
+//  };
+// function showAddress(address) {
+//     for(let key in address)
+//         console.log(key, address[key]);
+// }
+//
+// console.log(showAddress(address)); //street Manhattan
+//                                    // city New York
+//                                    // zipCode 10001
+
+
+// використати  Factory Function і Construktor Function для того,
+// щоб вивести значення обєкту
+//
+
+// Factory Function
+// function createAddress(street, city, zipCode) { //в назві функції вживається camelCase
+//     return {
+//         street,
+//         city,
+//         zipCode
+//     };
+// }
+// let address1 = createAddress('lubinska','Lviv', 79000);
+// console.log(address); //{ street: 'lubinska', city: 'Lviv', zipCode: 79000 }
+//
+
+
+// Construktor Function
+
+// function Address(street, city, zipCode) {//в назві функції вживається PascalName(з великої букви)
+//     this.street = street;
+//     this.city = city;
+//     this.zipCode =zipCode;
+// }
+// let address2 = new Address('gorodocka','lviv',79001);
+// console.log(address2); //Address { street: 'gorodocka', city: 'lviv', zipCode: 79001 }
+
+// Завдання порівняти вкладення 2х обєктів за допомогою 2 х функцій
+
+// let address1 = new Address('a','b','c');//маємо 2 обєкти
+// let address2 = new Address('a','c','c');
+//
+// function Address(street, city, zipCode) { // створюємо конструктор
+//     this.street = street;
+//     this.city = city;
+//     this.zipCode =zipCode;
+// }
+//
+// function areEqual(address1, address2) {
+//    return   address1.street === address2.street &&
+//             address1.city === address2.city &&
+//             address1.zipCode === address2.zipCode;
+//
+//
+// }
+//
+// function areSame(address1, address2) {
+//     return address1 === address1;
+// }
+// console.log(areEqual(address1, address2));//false
+// console.log(areSame(address1, address2));//true
+
+
+//створити обєкт газети з параметрами
+//title
+//body
+//author
+//views
+//commenth які будуть містити інфо про 2 авторів і чи вони зараз в в прямому ефірі
+//
+// let post = {
+//     title: 'a',
+//     body: 'b',
+//     author: 'c',
+//     views: 10,
+//     commenth:[
+//         {author:'a', body: 'b'},
+//         {author:'d', body: 'c'},
+//         ],
+//     isLive: true
+// };
+//
+// // створити функцію конструктор Видання , яке відображує одні параметри, як основні,,
+// //а інші як додаткові по замовчуванню
+// function Post(title, body, author) {
+//     this.title = title;//основні
+//     this.body = body;//основні
+//     this.author = author;//основні
+//     this.vievs = 0;//додаткові
+//     this.commenth = [];//додаткові
+//     this.isLive = false//додаткові
+//
+// }
+// let poster  = new Post('a','b','c',);
+// console.log(poster);
+
+
+//Завдання зробити масив обєктів цінового діапазону, як на сайті Yelp,
+// і повязати його з яцким небудь обєктом
+// let ArrPricesRanges = [
+//     {label: '$', tooltip: 'Inexpensive', minPerPerson: 0, maxPerPreson: 10},
+//     {label: '$$', tooltip: 'Moderate', minPerPerson: 11, maxPerPreson: 20},
+//     {label: '$$$', tooltip: 'Expensive', minPerPerson: 20, maxPerPreson: 50}
+//
+// ];
+// let restaurants = [
+//     {avaragePerPerson: 5}
+// ];
+
+//***************************A-R-R-A-Y-S-***************************************
+
+// const numbers = [3,4];
+//Додати елемент на початок
+// numbers.unshift(1, 2);
+// console.log(numbers);//[ 1, 2, 3, 4 ]
+//Додати елемент в кінець
+// numbers.push(5,6);
+// console.log(numbers);//[ 1, 2, 3, 4, 5, 6 ]
+//Додати елемент в середину
+// numbers.splice(2,0,'a','b');
+// console.log(numbers) //[1, 2, 3, 4, 'a', 'b', 5, 6]
+
+//---------------------------------------------------------
+
+// const numbers = [1, 2, 3, 1, 4];
+// console.log(numbers.indexOf('a')); //-1 це означає, що в масиві немає такого елемента
+// console.log(numbers.indexOf(1)); //0 це означає, що в масиві є такий елемент під 0 номером елемента
+// console.log(numbers.indexOf('1')); //-1 це означає, що в масиві немає 1 в якості string
+// console.log(numbers.lastIndexOf(1)); //3 це означає, що в масиві є 1 під третім номером елемента
+
+//Пошук елементів
+// const courses = [
+//     {id: 1, name:'a'},
+//     {id: 2, name:'b'},
+// ];
+
+// let course = courses.find(function (course) {
+//     return course.name ==='a';
+// });
+// console.log(course); //{ id: 1, name: 'a' }
+//
+// let course1 = courses.find(function (course) {
+//     return course.name ==='zxc';
+// });
+// console.log(course1); // undefined, бо немає такого елемента в цьому обєкті
+
+
+//Застосування С-Т-Р-І-Л-О-Ч-Н-О-Ї *** Ф-У-Н-К-Ц-І-Ї*********************
+
+// let course = courses.find(course=> {
+//     return course.name ==='a';
+// });
+
+//Є також простіший спосіб
+// let course = courses.find(course=> course.name ==='a');
+// console.log(course); //{ id: 1, name: 'a' }
+
+//*****В-И-Д-А-Л-Е--Н-Н-Я ***Е-Л-Е-М-Е-Н--Т-І-В*******************************
+
+// const numbers = [1, 2, 3, 4];
+//З кінця
+// const last = numbers.pop();
+// console.log(numbers); //[ 1, 2, 3 ]
+// console.log(last); // 4
+
+//З початку
+// const first = numbers.shift();
+// console.log(numbers); //[ 2, 3, 4 ]
+// console.log(first); //1
+
+//З середини
+// let middle = numbers.splice(2, 1 );
+// console.log(numbers);//[ 1, 2, 4 ]
+// console.log(middle);//3
+
+//Видалити всі елементи з масиву
+// let numbers = [1, 2, 3, 4];
+// let another = numbers; // вводимо ще одну змінну, яка копіює numbers і будемо
+// дивитися як вона відображається в різних рішеннях
+//Рішення 1
+// numbers = [];
+// console.log(numbers); // []
+// console.log(another); //[ 1, 2, 3, 4 ]
+//Рішення 2
+// numbers.length = 0;
+// console.log(numbers); // []
+// console.log(another); // []
+//Рішення 3
+// numbers.splice(0, numbers.length);
+// console.log(numbers); // []
+// console.log(another);// []
+//Рішення 4
+// while(numbers.length)
+// numbers.pop();
+//
+// console.log(numbers); // []
+// console.log(another); // []
+
+//*********************ДОДАВАННЯ І НАРІЗАННЯ МАСИВІВ **********************//
+
+// const first = [1, 2, 3];
+// const second = [4, 5, 6];
+//
+// const combined = first.concat(second);
+// console.log(combined); // [ 1, 2, 3, 4, 5, 6 ]
+
+// const slice = combined.slice(2, 4);
+// console.log(slice); //[ 3, 4 ]
+// const slice = combined.slice(2);
+// console.log(slice); //[ 3, 4, 5, 6 ]
+// const slice = combined.slice();
+// console.log(slice); //[ 1, 2, 3, 4, 5, 6 ]
+
+//З обєктами в масиві трохи по іншому
+
+// const first = [{id:1}];
+// const second = [4, 5, 6];
+//
+// const combined = first.concat(second);
+// // console.log(combined); //[ { id: 1 }, 4, 5, 6 ]
+// first[0].id = 10;
+// console.log(combined); //[ { id: 10 }, 4, 5, 6 ]
+
+//*****************С-П-Р-Е-Д---О-П-Е-Р-А-Т-О-Р********************
+// const first = [1, 2, 3];
+// const second = [4, 5, 6];
+
+// const combined = [...first, ...second];
+// console.log(combined); // [ 1, 2, 3, 4, 5, 6 ]
+
+//Використовуючи Спред оператори Можна додати в масиви значення по ходу іх використання
+
+// const combined = [...first, 'a', ...second, 'b'];
+// console.log(combined); // [ 1, 2, 3, 'a', 4, 5, 6, 'b' ]
+//
+// const copy = [...combined];
+// console.log(copy);
+
+//***********І--Т--Е--Р--А--Ц--І--Ї/////////////////////////////////
+
+// const numbers = [1, 2, 3];
+
+// for (let number of numbers)
+//     console.log(number);// 1
+//                         // 2
+//                         // 3
+
+// numbers.forEach(function (number) {
+//     console.log(number);
+// });                        // 1
+//                            // 2
+//                            // 3
+
+//спрощена версія попереднього виразу зі стрілочною функцією
+
+// numbers.forEach(number =>
+//     console.log(number)
+// );                            // 1
+//                               // 2
+//                               // 3
+//
+//***************приєднання масивів****************************
+
+// const numbers = [1, 2, 3];
+// const joined = numbers.join(',');
+// console.log(joined); // 1,2,3
+//
+// const message = 'This is my first message';
+// const parts = message.split(' ');
+// console.log(parts); //[ 'This', 'is', 'my', 'first', 'message' ]
+//
+// const combined = parts.join('-');
+// console.log(combined);//This-is-my-first-message
+
+// **************сортування масивів*********************************
+// const numbers = [2, 3, 1];
+// numbers.sort();
+// console.log(numbers); //[ 1, 2, 3 ]
+//
+// numbers.reverse();
+// console.log(numbers);//[ 3, 2, 1 ]
+
+// const courses = [
+//     {id:1, name: "Node JS" },
+//     {id:2, name: "javaScript" }
+// ];
+
+// courses.sort();
+// console.log(courses); //[ { id: 1, name: 'Node JS' }, { id: 2, name: 'JavaScript' } ]
+//НІЧОГО НЕ ВІДБУЛОСЯ ВЗАГАЛІ
+
+//правильно так
+//в нас є умова :
+// a<b => -1
+// a<b <= 1
+// a===b => 0
+// courses.sort(function (a,b) {
+//     if (a.name < b.name) return -1;
+//     if (a.name > b.name) return 1;
+//      return 0;
+//
+// });
+// console.log(courses);//[ { id: 1, name: 'Node JS' }, { id: 2, name: 'javaScript' } ]
+//
+// let sorted = courses.sort(function (a, b) {
+//     const nameA = a.name.toLowerCase();
+//     const nameB = b.name.toLowerCase();
+//     if (nameA < nameB) return -1;
+//     if (nameA > nameB) return 1;
+//     return 0;
+// });
+// console.log(sorted);//[ { id: 2, name: 'javaScript' }, { id: 1, name: 'Node JS' } ]
+
+//**************Тестування Елементів масиву***************************************
+//every -перевіряє всі елементи в масиві на відповідність умові
+// const numbers = [1, 2, 3];
+//
+// const allPositive = numbers.every(function (value) {
+//    return value >=0;
+// });
+// console.log(allPositive); // true
+//якщо хоча б один з елементів вданій задачіі буде "-", то результат false
+
+//some - перевіряє чи хоча б один елемент масиву відповідає умові
+// const numbers = [-1, -2, 3];
+//
+// const atLeastOnePositive = numbers.some(function (value) {
+//     return value >=0;
+// });
+// console.log(atLeastOnePositive); //true
+
+//*****************FILTERING******************************************
+
+// const  numbers = [1, -1, 2, 3];
+
+//  let negativeNum = numbers.filter(function (value) {
+//    return value <=0;
+// });
+
+//коротший варіант з допомогою стрілочної функції
+// let negativeNum = numbers.filter(value => value <= 0);
+// console.log(negativeNum); //[ -1 ]
+
+//*****************Mapping an Array**********************************
+// const  numbers = [1, -1, 2, 3];
+//  let filtered = numbers.filter(function (value) {
+//    return value >=0;
+// });
+// const items = filtered.map(value => '<li>' + value + '</li>');
+// console.log(items);//[ '<li>1</li>', '<li>2</li>', '<li>3</li>' ]
+//
+// // const html = items.join('');
+// // console.log(html);//<li>1</li><li>2</li><li>3</li>
+//
+// //Вкладаємо html в ul
+// const html = '<ul>' + items.join('') + '</ul>';
+// console.log(html); // <ul><li>1</li><li>2</li><li>3</li></ul>
+// //або ще один приклад
+// console.log('******************************************')
+// // const items1 = filtered.map(value => {
+// //     return  {value: value};
+// // });
+// //можна цейшматок коду записати простіше
+// const items1 = filtered.map(value => ({value:value}));
+// console.log(items1);//[ { value: 1 }, { value: 2 }, { value: 3 } ]
+// console.log(html);//<ul><li>1</li><li>2</li><li>3</li></ul>
+
+// це все можна записати ще простіше
+
+// const  numbers = [1, -1, 2, 3];
+// const items =numbers
+//     .filter(v => v >= 0)
+//     .map(v => ({ value: v}));
+//
+// console.log(items);//[ { value: 1 }, { value: 2 }, { value: 3 } ] //
+// //.... ми отримуємо те саме, що і зверху
+
+// // можна багато разів при необхідностві викликати раз по раз методи
+// // один за іншим в залежності від складності задачі
+// const  numbers = [1, -1, 2, 3];
+// const items =numbers
+//     .filter(v => v >= 0)    //вивели число більші 0 //[ 1, 2, 3 ]
+//     .map(v => ({ value: v}))    //ми відобразили кожне число до об'єкта зі значенням властивості //[ { value: 1 }, { value: 2 }, { value: 3 } ]
+//     .filter(obj => obj.value > 1)   //вивели значення обєкта більші за 1 //[ { value: 2 }, { value: 3 } ]
+//     .map(obj => obj.value);     // вивели значення цих обєктів у новий обєкт //[ 2, 3 ]
+// // можна сказати, що це сила ланцюга цього методу
+//
+// console.log(items);
+
+//****************Reducing in Array************************************
+// // Reduce  -  перетворити, зменшити
+// //задача зробити суму всіх елементів масиву
+// const  numbers = [1, -1, 2, 3];
+//
+// let sum = 0; // вводимо нову змінну
+// for (let n of numbers) // ітеруємо масив
+//     // sum = sum + n; //і додаємо кожен елемент при ітерації до sum ...
+//     // або можна простіше
+//     sum += n;
+//
+// console.log(sum); //5
+
+//можна попередню задачу зробити іншим способом з допомогою методу reduce
+
+// // const reduced = numbers.reduce((accumulator, currentValue) => {
+// //  return accumulator + currentValue;
+// // }, 0);
+// // console.log(reduced); //5
+//що відбулось в формулі з reduce:
+//a = 0, c = 1 => a = 1
+//a = 1, c = -1 => a = 0
+//a = 0, c = 2 => a = 2
+//a = 2, c = 3 => a = 5
+
+//можна скоротити код забравши нуль по замовчуванню, тоді відбудеться
+//a = 1, c = -1 => a = 0
+//a = 0, c = 2 => a = 2
+//a = 2, c = 3 => a = 5
+//тобто reduse стартував з першого елементу масиву, котрий записав в акумулятор
+// код матиме такий вигляд
+// const reduced1 = numbers.reduce(
+//     //забираємо return бо код має одну стрічку
+//     (accumulator, currentValue) => accumulator + currentValue
+// );
+// console.log(reduced1); //5
+
+//********************ЗАДАЧІ*****************************************
+//зробити функцію, яка відображає масив чисел між мінімальним і максимальним значеннями
+
+// const numbers = arrayFromRange(-5, 5);
+//
+// function  arrayFromRange(min, max){
+//    let output = [];
+//     for (let i = min; i <=max; i++) {
+//         output.push(i);
+//     }
+//     return output;
+// }
+// console.log(numbers);//[ -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5 ]
+
+//написати функцію, яка відтворює властивості метода includes
+// const numbers = [1, 2, 3, 4];
+// console.log(numbers.includes(1)); //true
+//
+// function includes(array, searchElement) {
+//     for (let element of array)
+//         if (element === searchElement)
+//             return true;
+//    return false;
+// }
+// console.log(includes(numbers, 1)); //true
+// console.log(includes(numbers, -1)); // false
+
+//написати функцію, яка б виключала з масиву чисел ті які ми задавали в умові на виключення
+
+// const numbers = [1,2,3,4,1,1];
+// const output = except(numbers, [1, 2]);
+//
+//
+// function except(array, excluded) {
+//     const output = []; // створюємо пустий масив
+// for (let element of array) // ітеруємо
+//     if (!excluded.includes(element)) //якщо елемент НЕ включений в excluded
+//         output.push(element);
+//     return output; //повертаємо новий масив без виключених елементів
+// }
+//
+// console.log(output); //[ 3, 4 ];
+
+//створити функцію яка б зміщувала елементи в масиві нна вказаний індекс
+
+// const numbers = [1, 2, 3, 4];
+//
+// const output = move(numbers, 0, 3);
+// console.log(numbers);
+// console.log(output);
+//
+// function  move(array, index, offset) {
+//     const position = index + offset;
+//     if(position>=array.length || position < 0){
+//         console.log('invalid Offset');
+//         return;
+//     }
+//         const output = [...array];
+//         const element = output.splice(index, 1)[0];
+//         output.splice(position, 0, element );
+//         return output;
+// }
+
+// count occurances - порахувати кількість елементів, які є вмасиві та вивести в консоль
+
+
+// const numbers = [1, 2, 3, 4, 1, 1];
+//
+// const count = countOccurrences(numbers, 1);
+//
+// console.log(count);//3
+
+//перший варіант рішення
+// function countOccurrences(array, searchElement) {
+//     let arr = [];
+//     for (const countElement of array)
+//         if (searchElement===countElement)
+//             arr.push(searchElement);
+//             return arr.length
+//
+// }
+
+//другий варіант рішення
+// function countOccurrences(array, searchElement) {
+//     let count = 0;
+//     for (const countElement of array)
+//         if (countElement===searchElement)
+//             count++;
+//         return count;
+// }
+
+//третій варіант рішення через REDUCE
+// const numbers = [1, 2, 3, 4, 1, 1];
+// const count = countOccurrences(numbers, 1);
+// console.log(count);//3
+// function countOccurrences(array, searchElement){
+//     array.reduce((accumulator, current) => {
+//     const occurrence = (current ===searchElement) ? 1 : 0;
+//         console.log(accumulator, current, searchElement);
+//         return accumulator + occurrence;
+//     }, 0);
+// }
+
+
+// const numbers = [1, 2, 3, 4];
+//
+// const max = getMax(numbers);
+//
+// console.log(max);
+
+// перший спосіб
+// function getMax(array) {
+//  if (array.length === 0) return undefined;
+//  let max = array[0];
+//     for (let i = 1; i < array.length; i++)
+//         if(array[i] > max)
+//             max = array[i];
+//     return max;
+// }
+
+//другий спосіб з допомогою REDUCE
+// function getMax(array) {
+//     if (array.length === 0) return underfined;
+//     return  array.reduce((a, b) =>(a > b) ? a : b);
+// }
+
+//на писати функцію, щоб отримати
+//Всі фільми 2018 року з рейтом > 4
+//відсортувати їх за рейтингом у порядку  зменшення
+// const movies = [
+//     {title: 'a', year: 2018, rating: 4.5 },
+//     {title: 'b', year: 2018, rating: 4.7 },
+//     {title: 'c', year: 2018, rating: 3 },
+//     {title: 'd', year: 2017, rating: 4.5 },
+// ];
+//
+// const titles = movies
+//     .filter(m => m.year === 2018 && m.rating >= 4) //Всі фільми 2018 року з рейтом > 4
+//     .sort((a, b) => a.rating - b.rating )
+//     .reverse()
+//     .map(m => m.title);
+//
+// console.log(titles);
+
+
+//*********************F___U___N___C___T___I___O___N___S**********************
+
+//оголошення функції та вирази
+
+//Function declaration  - декларація функції
+// function walk () {
+//     console.log('walk');
+// }
+
+// Named Function expression - вираз функції
+// let run = function walk() {
+//     console.log('run');
+// };
+// run();
+
+//Anonymous Function Expression
+// const run = function () {
+//     console.log('run');
+// };
+// let move = run;
+// run(); //run
+// move(); //run
+
+// ********************Hoisting(підіймати)*****************************
+
+//Function declaration  - декларація функції
+// walk();//walk  //перевага над  Function Expression, що можна викликати функцію поверх коду
+// function walk () {
+//     console.log('walk');
+// }
+// walk();//walk
+
+//Expression Function Expression. - вираз функції
+// run(); //run is not defined // а тут перед кодом функція не працює,
+// const run = function () {
+//     console.log('run');
+// };
+// run(); //run
+//нормальною вважається практика, коли код
+// записують поверх його виклику, тоді не буває
+// проблем з викликом функції в обох випадках,
+//тому Hoisting - код поверх виклику функції
+
+//***********************ARGUMENTS*************************************
+//
+// function sum(a, b) {
+//     return a + b;
+// }
+//
+// console.log(sum(1, 2)); //3 (1+2)
+// console.log(sum(1)); //NaN (1+underfined)
+
+
+// function sum() {
+//     let total = 0;
+//     for (let value of arguments) // обєкт arguments
+//         // Цей об'єкт містить інформацію про кількість
+//         // та значення всіх параметрів, що їх було передано
+//         // до функції під час її виклику
+//         total += value;
+//     return total;
+// }
+// console.log(sum(1, 2, 3, 4, 5)); // 15
+
+//********************The Rest Operator (залишковий або останній оператор)********************************
+// SPREAD копіює масив або його всі властивості і для розділення колекцій на
+//окремі елементи
+// REST навпаки для зєднання окремих значень  в масив
+
+// function sum(...args) {
+//     console.log(args);
+// }
+// console.log(sum(1, 2, 3, 4, 5));  //[ 1, 2, 3, 4, 5 ]
+
+//якщо ми хочемо суму всіх аргументів ми можемо це релізувати з REST оператором
+//через REDUCE
+
+// function sum(...args) {
+//     return args.reduce((a,b) => a+b);
+// }
+// console.log(sum(1, 2, 3, 4, 5)); //15
+
+//Наприклад потрібно в магазині порахувати знижку на ціну товарів
+
+// function sum(discount, ...prices) {
+//     const total = prices.reduce((a, b) => a + b);
+//     return total * (1 - discount);
+// }
+//
+// console.log(sum(0.1, 20, 30));  //45  //це означає (20+30)*0.1
+//******************Default Parametrs**************************************
+// function interest(principal, rate, years){
+//     return principal * rate / 100 * years;
+// }
+//
+// console.log(interest(10000, 3.5, 5)); //1750
+
+//маючи дану функцію з параметрами ми можемо задати параметри по замовчуванню
+//в середині цієї функції
+
+// function interest(principal, rate, years) {
+//     rate = rate || 3.5; // якщо rate має дійсне значення, то використовується воно, в іншому випадку 3.5
+//     years = years || 5;
+//
+//     return principal * rate / 100 * years;
+// }
+// console.log(interest(10000)); // 1750 // ми знову отримуємо таке ж значення без задавання параметрів
+
+
+// але можна простіше
+// function interest(principal, rate = 3.5, years = 5) { // можна default значення вводити прямо сюди
+//     //але дефолні значення вставляються завжди В КІНЕЦЬ ВСІХ ПАРАМЕТРІВ!!!
+//     return principal * rate / 100 * years;
+// }
+// console.log(interest(10000)); //1750 // результат той самий, що попередньо
+
+//***************GETTER and SETTER********************************************
+// const person = {
+//     firstName: 'Ivan',
+//     lastName: 'Franko',
+//     //fullName: function () {}
+//     get fullName(){ // так виглядає getter
+//         return `${person.firstName} ${person.lastName}`
+//     },
+//     set fullName(value){// так виглядає setter
+//         const parts = value.split(' ');//ми повинні зробити пробіл між імям та призвищем
+//         this.firstName = parts[0];
+//         this.lastName = parts[1];
+//     }
+// };
+// console.log(person.fullName);//Ivan Franko
+//
+// person.fullName = 'Taras Shevchenko';
+// // для того щоб вводити і отримувати дані з обєкта ми використовуємо :
+// //GETTER - access properties (отримати властивості)
+// //SETTER - change (mutate) them (змінювати їх)
+// console.log(person.fullName); //Taras Shevchenko
+
+//*****************Try and Catch*****************************************
+
+// const person = {
+//     firstName: 'Ivan',
+//     lastName: 'Franko',
+//     //fullName: function () {}
+//     get fullName(){ // так виглядає getter
+//         return `${person.firstName} ${person.lastName}`
+//     },
+//     set fullName(value){// так виглядає setter
+//         const parts = value.split(' ');//ми повинні зробити пробіл між імям та призвищем
+//         this.firstName = parts[0];
+//         this.lastName = parts[1];
+//     }
+// };
+
+//В нас є той самий з попереднього завдання обєкт,
+//припустимо  що в певній ситуації значення name і lastname = null, тоді вираз повинен мати значення
+
+// const person = {
+//     firstName: 'Ivan',
+//     lastName: 'Franko',
+//     //fullName: function () {}
+//     get fullName(){ // так виглядає getter
+//         return `${person.firstName} ${person.lastName}`
+//     },
+//     set fullName(value){// так виглядає setter
+//         if (typeof value != 'string') return;//добавили перевірку на значення
+//         // в імені обо прізвищі
+//
+//         const parts = value.split(' ');
+//         this.firstName = parts[0];
+//         this.lastName = parts[1];
+//     }
+// };
+// person.fullName = null; //це значення null про яке ми говорили попередньо
+//
+// console.log(person);//{ firstName: 'Ivan',lastName: 'Franko',fullName: [Getter/Setter] }
+
+
+//Удосконалюємо первірку
+// const person = {
+//     firstName: 'Ivan',
+//     lastName: 'Franko',
+//     //fullName: function () {}
+//     get fullName(){
+//         return `${person.firstName} ${person.lastName}`
+//     },
+//     set fullName(value){
+//         const e = new Error();
+//         if (typeof value != 'string')
+//             throw new Error('Value is not a string'); // синтакс throw вживається
+//         // в вийняткових ситуаціях
+//
+//         const parts = value.split(' ');
+//
+//         this.firstName = parts[0];
+//         this.lastName = parts[1];
+//     }
+// };
+
+// //для того щоб зловити помилку ми використовуємо
+// try{
+//     person.fullName = null;
+// }
+// catch (e) {
+//     alert(e); //  Error: Value is not a string
+// }
+//
+// console.log(person);
+
+ //якщо ми замість null ставимо пусту стрічку, то повинні додати ще одну перевірку в SETTER
+// const person = {
+//     firstName: 'Ivan',
+//     lastName: 'Franko',
+//     //fullName: function () {}
+//     get fullName(){
+//         return `${person.firstName} ${person.lastName}`
+//     },
+//     set fullName(value){
+//         const e = new Error();
+//         if (typeof value != 'string')
+//             throw new Error('Value is not a string');
+//         const parts = value.split(' ');
+//         if (parts.length !==2)//ще одна перевірка
+//             throw new Error("Enter a first and last name");
+//         this.firstName = parts[0];
+//         this.lastName = parts[1];
+//     }
+// };
+//
+// try{
+//     person.fullName = '';// умова з пустою стрічкою
+// }
+// catch (e) {
+//     console.log((e)); // Error: Enter a first and last name
+// }
+//
+// console.log(person);
+
+//*************Місцева та глобальна змінна****************************
+//
+// const message  = 'hi';
+// console.log(message); // hi
+
+//якщо покласти змінну в блок коду, то отримаємо
+// function start() {
+//     const message  = 'hi';  //1
+//
+//     if (true){              //2
+//         const another = 'bye';
+//     }
+//     for (let i = 0; i <5; i++) { //3
+//         console.log(i);
+//     }
+//     // console.log(another); //2
+//     console.log(i);
+// }
+
+// console.log(message); // ReferenceError: message is not defined //1
+// start();//ReferenceError: another is not defined //2
+// start();//ReferenceError: another is not defined //3
+
+//попробуємо інакше
+// const color = 'red'; //глобальна змінна(вона відкрита всюди)
+//
+// function start() {
+//     const message = 'hi'; // змінна в середині функції(вона відкрита тільки в тому блоці, де лежить)
+//     // console.log(color); //red , тобто глобальну змінну можна використовувати навіть в іншомублоці
+//     //вводимо сюди змінну, яку теж назвемо color
+//     const color = `blue`;
+//     console.log(color); // blue
+// }
+//
+// function stop() {
+//     const message = 'bye';
+// }
+//
+// start();
+// console.log(color);//red
+
+//******************THIS keyword*************************************
+
+//method -> obj
+//на цьому прикладі показано що методи - це є обєкти
+
+// const video = {
+//     title: 'a',
+//     play(){
+//         console.log(this);
+//     }
+// };
+// video.stop = function(){
+//     console.log(this);
+// };
+// // video.play(); //{ title: 'a', play: [Function: play] }
+// video.stop(); //{ title: 'a', play: [Function: play], stop: [Function] }
+
+// //function -> global(window, global)
+// const video = {
+//     title: 'a',
+//     play(){
+//         console.log(this);
+//     }
+// };
+//
+// // function playVideo() {
+// //     console.log(this);
+// // }
+// //
+// // playVideo(); //Object [global] //тут ми отримали Window object
+// //
+//
+// function Video(title) {
+//     this.title = title;
+//     console.log(this);
+// }
+// const v = new Video('A'); //Video { title: 'A' } // тут ми отримали новий
+// // обєкт бо ми використали оператор new
+// // і отримали пустий обєкт в який за допомогою
+// // оператора this дали можливість
+// // вказати новий параметр обєкту
+
+
+// const video = {
+//     title: 'a',
+//     tags: ['a', 'b', 'c'],
+//     showTag(){
+//         this.tags.forEach(function (tag) {
+//             console.log(tag);
+//         });
+//     }
+// };
+//
+// // video.showTag();// a b c
+
+
+// const video = {
+//     title: 'a',
+//     tags: ['a', 'b', 'c'],
+// showTag(){
+//     this.tags.forEach(function (tag) {
+//         console.log(this, tag);
+//     });
+// }
+// };
+// video.showTag();//Window {parent: Window, postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, …} "a"
+//                 //Window {parent: Window, postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, …} "b"
+//                 //Window {parent: Window, postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, …} "c"
+
+
+// const video = {
+//     title: 'a',
+//     tags: ['a', 'b', 'c'],
+//     showTag(){
+//         this.tags.forEach(function (tag) {
+//             console.log(this.title, tag);
+//         }, this);
+//     }
+// };
+//
+// video.showTag(); //a a
+//                  //a b
+//                  //a c
+
+//********************************заміна THIS***************************
+
+// function  playVideo(a, b) {
+//     console.log(this);
+// }
+//
+// playVideo.call({name: "Stepan"}, 1, 2); //{ name: 'Stepan' }
+// playVideo.apply({name: "Stepan"}, [1, 2]); //{ name: 'Stepan' }
+// // playVideo();//Window {parent: Window, postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, …}
+// playVideo.bind({name: "Stepan"})();//{ name: 'Stepan' }
+
+// const video = {
+//     title: 'a',
+//     tags: ['a', 'b', 'c'],
+// showTag(){
+//     this.tags.forEach(tag => {
+//         console.log(this.title, tag);
+//        });
+//     }
+// };
+//
+// video.showTag(); //a a
+//                  //a b
+//                  //a c
+
+
+//************************E-X-E-R-C-I-S-E************************************
+
+//написати функцію, котра виводить суму  з масиву довільних чисел
+
+// function sum(...args) {
+//     return args.reduce((a, b) => a+b);
+// }
+// console.log(sum(1, 2, 4, 5, 6, 7)); // 25
+
+//написати  функцію, яка виводить суму чисел з масиву масивів з допомогою рест оператора(...args)
+
+// function sum(...args) {
+//     if (args.length === 1 && Array.isArray(args[0]))
+//         args = [...args[0]];
+//
+//     return args.reduce((a, b) => a + b);
+// }
+//
+// console.log(sum(1, 2, 4, 5, 6, 5)); //23
+
+
+//створити ПЛОЩУ КОЛА, де circle.radius = 2, параметр кола можна прочитати
+// як console.log(circle.area);
+
+// const circle = {
+//     radius: 1,
+//     area(){
+//         return this.radius*this.radius*Math.PI;
+//     }
+// };
+//
+// console.log(circle.area());//3.141592653589793
+// circle.radius = 30; // ввожу новий параметр
+// console.log(circle.area()); //2827.4333882308138
+
+
+//Error Handling - помилка обробки
+//завданням було якщо перший елемент заданого прикладу функції не є array,
+// то потрібно вивести помилку
+
+
+//блок, який перевіряє на наявність заданого масиву
+try{
+    const numbers = [1, 2, 3, 4];
+    const count = countOccurrences(null, 1);
+    console.log(count);
+}
+catch (e) {
+    console.log(e.message); //Invalid array
+}
+// функція яка знаходить елемент в масиві і повертає кількість їх
+function countOccurrences(array, searchElement) {
+   if (!Array.isArray(array))
+       throw new Error('Invalid array');
+    return array.reduce((accumulator, current) => {
+        const occurrence = (current === searchElement) ? 1 : 0;
+        return accumulator + occurrence;
+    }, 0)
+}
+
+console.log(countOccurrences([1, 5, 4, 7, true], true)); //1
